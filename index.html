@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <!-- Bootstraps Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -51,8 +53,8 @@
       </div>
       <img src="img/Profile-Lani.jpg" alt="Lani" width="300px" class="rounded-circle img-thumbnail" />
       <div class="display-4">Maulani Izza Hanifa</div>
-      <p class="lead">Bocil | Dede | Gemoy | Puding | Pacar | Temen</p>
-      <p class="lead">Wanita cantik, mandiri dan aktif yang baru saja berumur 22 tahun</p>
+      <p class="lead nickname"></p>
+      <p class="lead description"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -71,7 +73,7 @@
             <h2>Wishes and Words</h2>
           </div>
         </div>
-        <div class="row justify-content-center fs-5 mb-3">
+        <div class="row justify-content-center fs-5 mb-3" data-aos="fade-right">
           <div class="col-10">
             <p>Selamat ulang tahun ke-22 sayangku Laniiiii, semoga hal-hal baik yang kamu inginkan terwujud dan semoga rencana-rencana kita berjalan dengan lancar serta tersegerakan :).</p>
             <p>
@@ -115,7 +117,7 @@
         </div>
         <div class="row">
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left">
               <img src="img/selamat21-23-juli.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Selamat Ke-21 - 23 Juli 2023</p>
@@ -123,7 +125,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="100">
               <img src="img/UPM-24-Juli.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">UPM Semester 6 - 24 Juli 2023</p>
@@ -131,7 +133,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="200">
               <img src="img/FB-5-Agus.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Foto Both TEP - 05 Agustus 2023</p>
@@ -139,7 +141,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="300">
               <img src="img/jemput-8-agus.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Dijemput Alfi - 08 Agustus 2023</p>
@@ -147,7 +149,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left">
               <img src="img/Dijemput-27-agus.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Dijemput Lani - 27 Agustus 2023</p>
@@ -155,7 +157,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="100">
               <img src="img/Masakan-1-sep.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Masakan Lani - 01 September 2023</p>
@@ -163,7 +165,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="200">
               <img src="img/Diikutin-27-sep.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Diikutin Orang - 27 September 2023</p>
@@ -171,7 +173,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="300">
               <img src="img/Studio-5-okt.JPG" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Foto Studio - 05 Oktober 2023</p>
@@ -179,7 +181,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left">
               <img src="img/Rumah-15-dec.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Rumah Alfi - 15 Desember 2023</p>
@@ -187,7 +189,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="100">
               <img src="img/UPM-27-jan.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">UPM Semester 7 - 23 Januari 2024</p>
@@ -195,7 +197,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="200">
               <img src="img/Sebelum-4-feb.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Sebelum Makassar - 04 Februari 2024</p>
@@ -203,7 +205,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="300">
               <img src="img/setelah-4-april.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Setelah Makassar - 04 April 2024</p>
@@ -211,7 +213,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left">
               <img src="img/Ta-29-april.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Progress TA - 29 April 2024</p>
@@ -219,7 +221,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="100">
               <img src="img/Setahun-10-juni.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Setahunnn - 10 Juni 2024</p>
@@ -227,7 +229,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="200">
               <img src="img/kkp-4-juli.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">Sidang KKP - 04 Juli 2024</p>
@@ -235,7 +237,7 @@
             </div>
           </div>
           <div class="col col-sm-6 col-md-3 mb-3">
-            <div class="card text-center">
+            <div class="card text-center" data-aos="flip-left" data-aos-delay="300">
               <img src="img/UAS-9-juli.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-header fs-5">UAS Terakhir - 09 Juli 2024</p>
@@ -328,11 +330,31 @@
     <!-- Footer -->
     <footer class="footer mt-auto pb-3 bg-primary text-white text-center">
       <div class="container">
-        <span>Made With <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/lfzain/" class="text-white fw-bold">Alfi Zain</a> @2024</span>
+        <span>Made With <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/lfzain/" target="_blank" class="text-white fw-bold">Alfi Zain</a> @2024</span>
       </div>
     </footer>
     <!-- Akhir Footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".nickname", { duration: 3, delay: 1.5, text: "Bocil | Dede | Gemoy | Puding | Pacar | Temen" });
+      gsap.to(".description", { duration: 3.5, delay: 1.5, text: "Wanita cantik, mandiri dan aktif yang baru saja berumur 22 tahun" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1.5, x: -50, opacity: 0, delay: 0.5 });
+    </script>
+
     <script>
       // Form to Google Sheet
       const scriptURL = "https://script.google.com/macros/s/AKfycbx2x2pSsE-HlBV-oVsx09ImTM_d-bBgbgURkKkjbFPV05xpMyT38dvwMGJMnYYkuZXZ/exec";
