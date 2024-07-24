@@ -31,6 +31,9 @@
               <a class="nav-link" href="#moment">Key Moment's</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#hopes">Hopes</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#alfi">Your Love</a>
             </li>
           </ul>
@@ -251,12 +254,54 @@
     </section>
     <!-- Akhir Moments -->
 
+    <!-- hopes -->
+    <section id="hopes">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col mb-3">
+            <h2>Kesan dan Harapan</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible alert-hopes fade show d-none" role="alert">
+              <strong>AAMIIN</strong> Semoga Tercapai :)
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="hopes-form">
+              <div class="mb-3">
+                <label for="kesan" class="form-label">Kesan Terhadap Moment-Moment Setahun Yang Lalu</label>
+                <textarea class="form-control" id="kesan" rows="3" name="kesan"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="harapan" class="form-label">Harapan Untuk Tahun Yang Akan Datang</label>
+                <textarea class="form-control" id="harapan" rows="3" name="harapan"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-kirim">AAMIIN</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,256L48,240C96,224,192,192,288,176C384,160,480,160,576,149.3C672,139,768,117,864,128C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir hopes -->
+
     <!-- Alfi -->
     <section id="alfi">
       <div class="container">
         <div class="row text-center">
           <div class="col mb-3">
-            <h2>Your Love Alfi <i class="bi bi-heart-fill text-danger"></i></h2>
+            <h2>Your Love, Alfi</h2>
           </div>
           <div class="row justify-content-center fs-5 mb-3">
             <div class="col col-sm-6 col-md-3 mb-3">
@@ -288,8 +333,35 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Confetti Animation -->
     <script>
+      // Form to Google Sheet
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx2x2pSsE-HlBV-oVsx09ImTM_d-bBgbgURkKkjbFPV05xpMyT38dvwMGJMnYYkuZXZ/exec";
+      const form = document.forms["hopes-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alertHopes = document.querySelector(".alert-hopes");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Ketika tombol submit di klik
+        // Tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            // Tampilkan alert
+            alertHopes.classList.toggle("d-none");
+            // Reset Form
+            form.reset();
+            btnKirim.classList.toggle("d-none");
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      //  Confetti Animation
       function createConfetti() {
         const confettiContainer = document.getElementById("confetti-container");
         for (let i = 0; i < 100; i++) {
